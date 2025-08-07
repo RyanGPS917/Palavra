@@ -1,3 +1,4 @@
+import { PALAVRAS_RUINS } from "./palavrasRuins.js";
 const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
 
 
@@ -22,7 +23,6 @@ function processaTexto (texto) {
         return frequencias [p2] - frequencias [p1];
     }
 
-    console.log(ordenadas);
     return ordenadas.slice(0,10);
 }
 
@@ -43,20 +43,7 @@ function   contaFrequencias(palavras){
 }
 
 function tiraPalavrasRuins(palavras) {
-    const PALAVRAS_RUINS = new Set([  "que",
-    "para",
-    "com",
-    "não",
-    "uma",
-    "por",
-    "mais",
-    "dos",
-    "como",
-    "mas",
-    "foi",
-    "ele",
-    "das",
-]);
+   
  const palavrasBoas = [];
  for (let palavras of palavras){
     if (!palavras_RUINS.has(palavras)&& palavra.length > 2){
